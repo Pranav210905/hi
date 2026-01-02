@@ -22,6 +22,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
         { id: 'dashboard', label: 'Dashboard', icon: '📊' },
         { id: 'companies', label: 'Companies', icon: '🏢' },
         { id: 'assessments', label: 'Assessments', icon: '📝' },
+        { id: 'question-organizer', label: 'Organize Questions', icon: '📚' },
         { id: 'students', label: 'Students', icon: '👥' }
       ]
     }

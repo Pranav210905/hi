@@ -6,6 +6,7 @@ import CompanyList from '../components/CompanyList';
 import AssessmentManager from '../components/AssessmentManager';
 import '../styles/Sidebar.css';
 import PDFQuestionParser from './PDFQuestionParser';
+import QuestionOrganizer from './QuestionOrganizer';
 import Dashboard from './Dashboard'
 
 // In renderContent() switch statement, add:
@@ -159,6 +160,17 @@ const AdminDashboard = () => {
     </div>
   );
 
+      case 'question-organizer':
+        return (
+          <div>
+            <div className="page-header">
+              <h1 className="page-title">Question Organizer</h1>
+              <p className="page-subtitle">Upload and organize questions by difficulty level</p>
+            </div>
+            <QuestionOrganizer />
+          </div>
+        );
+
       case 'students':
         return (
           <div>
@@ -178,7 +190,7 @@ const AdminDashboard = () => {
               </p>
             </div>
           </div>
-        
+
         );
       default:
         return null;

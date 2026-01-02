@@ -37,6 +37,11 @@ const fileSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
+  difficulty: {
+    type: String,
+    enum: ['easy', 'medium', 'difficult'],
+    default: null
+  },
   createdAt: {
     type: Date,
     default: Date.now

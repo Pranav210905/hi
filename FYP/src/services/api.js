@@ -45,6 +45,8 @@ export const fileAPI = {
     headers: { 'Content-Type': 'multipart/form-data' },
   }),
   getByTopic: (topicId) => api.get(`/files/topic/${topicId}`),
+  getByCompanyTopicDifficulty: (companyId, topicId, difficulty) => api.get(`/files/company/${companyId}/topic/${topicId}/difficulty/${difficulty}`),
+  getAllByDifficulty: (companyId, topicId) => api.get(`/files/company/${companyId}/topic/${topicId}/all-difficulties`),
   delete: (id) => api.delete(`/files/${id}`),
 };
 
