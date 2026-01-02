@@ -64,6 +64,8 @@ export const assessmentAPI = {
   parsePDF: (formData) => api.post('/question-parser/parse-pdf', formData, {
     headers: { 'Content-Type': 'multipart/form-data' },
   }),
+   parseStoredFile: (fileId) =>
+    api.post(`/question-parser/parse-stored/${fileId}`),
   createFromPDF: (data) => api.post('/question-parser/create-assessment-from-pdf', data),
 };
 
